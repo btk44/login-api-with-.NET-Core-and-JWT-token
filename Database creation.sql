@@ -1,0 +1,18 @@
+CREATE SCHEMA `LoginAppDb` ;
+
+CREATE TABLE `LoginAppDb`.`Account` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(45) NOT NULL,
+  `Password` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`Id`));
+
+CREATE TABLE `LoginAppDb`.`RefreshToken` (
+  `Id` INT NOT NULL AUTO_INCREMENT,
+  `Token` VARCHAR(45) NOT NULL,
+  `ExpiresAt` DATETIME NOT NULL,
+  `AccountId` INT NOT NULL,
+  PRIMARY KEY (`Id`));
+
+
+INSERT INTO LoginAppDb.Account (Name, Password) VALUES ('test', 'AQAAAAEAACcQAAAAEGdDivPEdEUa1qYvHfS7HNKyRpJfawOx6EosUIplYM5LBVvGg3XADTPcvMxmJaEHhA==');
+
