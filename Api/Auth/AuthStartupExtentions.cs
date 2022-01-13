@@ -33,16 +33,6 @@ namespace Api.Auth
                       // debug "invalid token" scenarios here
                       var exType = context.Exception.GetType();
                       return Task.CompletedTask;  
-                  },
-                  OnTokenValidated = context =>
-                  {
-                      var xxx = context;
-                      return Task.CompletedTask;
-                  },
-                  OnForbidden = context =>
-                  {
-                      var xxx = context;
-                      return Task.CompletedTask;
                   }
               };  
             });
